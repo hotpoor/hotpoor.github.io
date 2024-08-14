@@ -6,11 +6,14 @@ console.log "hello, xialiwei"
 
 Hs.xialiwei_waterfall_layout_items_data_authors =
     "user0":
-        "name":"Claire Jung"
+        "name":"站点0"
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_547c3bfa29616101f5f6e635193315a1?imageView2"
     "user1":
-        "name":"大狼狗夫妇"
+        "name":"站点1"
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_015c2bf06d9b0d72a382711771ad1baa?imageView2"
+
+Hs.xialiwei_waterfall_layout_items_data_flag =
+    "current_all_y":[]
 
 Hs.xialiwei_waterfall_layout_items_data = [
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -20,7 +23,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "type":"note"
         "creator_type":"author"
         "author":"user0"
-        "title":"친구의 참여를 기다리거나 전화를 걸어 직접 참여 의사를 물어보세요."
+        "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -32,7 +35,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "authors":[
             "user0","user1"
         ]
-        "title":"친구의 참여를 기다리거나 전"
+        "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -42,7 +45,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "type":"note"
         "creator_type":"author"
         "author":"user1"
-        "title":"친구의 참여를"
+        "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -64,7 +67,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "type":"note"
         "creator_type":"author"
         "author":"user0"
-        "title":"친구의 참여를 기다리거나 전화를 걸어 직접 참여 의사를 물어보세요."
+        "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -76,7 +79,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "authors":[
             "user0","user1"
         ]
-        "title":"친구의 참여를 기다리거나 전"
+        "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -86,7 +89,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "type":"note"
         "creator_type":"author"
         "author":"user1"
-        "title":"친구의 참여를"
+        "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
         "thumbnail":"http://tasterest-cdn.xialiwei.com/dd81fb297e2344e49f7dfd2328269e51_7255ae8e9530c1b9ca4995a896da64d5?imageView2"
@@ -110,8 +113,14 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
         height:cards_height
     _html_gap = 10
     _html_width_base = (cards_width-(_html_gap)*(column-1))/column
+
+    current_all_y = []
+    for i in [0..column-1]
+        current_all_y.push 0
+    Hs.xialiwei_waterfall_layout_items_data_flag["current_all_y"]=current_all_y
     console.log "data:",cards_width,_html_gap,column,_html_width_base
     $(".xialiwei_waterfall_layout_item_cards_page").empty()
+    item_data_index = 0
     for item_data in Hs.xialiwei_waterfall_layout_items_data
         if item_data["ui_type"] in ["xhs_note"]
             _html_title = ""
@@ -138,12 +147,15 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
             _html_gap = 10
             _html_width = (cards_width-(_html_gap)*(column-1))/column
             _html_height = _html_width/item_data["width"]*item_data["height"]
+            _html_uuid = Hs.uuid2(6,null)
             _html = """
             <div class="xialiwei_waterfall_layout_item_card"
                 data-ui-type="xhs_note"
+                data-uuid="#{_html_uuid}"
                 style="
                     width:#{_html_width}px;
-                ">
+                "
+                >
                 <div class="xhs_note_thumbnail"
                     style="
                         width:#{_html_width}px;
@@ -163,6 +175,27 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
         else
             _html = ""
         $(".xialiwei_waterfall_layout_item_cards_page").append _html
+        console.log "w,h",$("[data-uuid=#{_html_uuid}]").width(),$("[data-uuid=#{_html_uuid}]").height()
+        w = $("[data-uuid=#{_html_uuid}]").width()
+        h = $("[data-uuid=#{_html_uuid}]").height()
+        item_data["w"]=w
+        item_data["h"]=h
+        item_data["index"]=item_data_index
+
+        [use_min_index,use_min] = Hs.find_list_min_index_and_min Hs.xialiwei_waterfall_layout_items_data_flag["current_all_y"]
+        console.log "use_min_index,use_min:",use_min_index,use_min
+        x = (use_min_index%column)*(_html_width+_html_gap)
+        y = use_min
+        Hs.xialiwei_waterfall_layout_items_data_flag["current_all_y"][use_min_index]= y + h
+
+        $("[data-uuid=#{_html_uuid}]").css
+            "transform": "translate(#{x}px, #{y}px)"
+        item_data["x"]=x
+        item_data["y"]=y
+
+        item_data_index+=1
+        console.log Hs.xialiwei_waterfall_layout_items_data_flag["current_all_y"]
+    console.log Hs.xialiwei_waterfall_layout_items_data
 $ ->
     $(window).on "load",(evt)->
         cards_dom = $(".xialiwei_waterfall_layout_item_cards")[0]
