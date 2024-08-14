@@ -128,7 +128,9 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
                 _html_creator = """
                 <div class="xhs_note_creator">
                     <div class="xhs_note_creator_author_thumbnail">
-                        <img src="#{_html_creator_author_thumbnail}">
+                        <div>
+                            <img src="#{_html_creator_author_thumbnail}">
+                        </div>
                     </div>
                     <div class="xhs_note_creator_author_name">#{_html_creator_author_name}</div>
                 </div>

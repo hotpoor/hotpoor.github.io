@@ -55,14 +55,14 @@ body{
     line-height: 140%;
 }
 
-.xhs_note_creator_author_thumbnail{
+.xhs_note_creator_author_thumbnail>div{
     width: 20px;
     height: 20px;
     overflow: hidden;
     border-radius: 10px;
     margin-right: 6px;
 }
-.xhs_note_creator_author_thumbnail>img{
+.xhs_note_creator_author_thumbnail>div>img{
     width: 100%;
     height: 100%;
     object-fit: cover;

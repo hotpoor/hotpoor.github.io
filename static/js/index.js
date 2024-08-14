@@ -146,7 +146,9 @@
           _html_creator_author_thumbnail = Hs.xialiwei_waterfall_layout_items_data_authors[_html_creator_author]["thumbnail"];
           _html_creator = `<div class="xhs_note_creator">
     <div class="xhs_note_creator_author_thumbnail">
-        <img src="${_html_creator_author_thumbnail}">
+        <div>
+            <img src="${_html_creator_author_thumbnail}">
+        </div>
     </div>
     <div class="xhs_note_creator_author_name">${_html_creator_author_name}</div>
 </div>`;
