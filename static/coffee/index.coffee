@@ -40,7 +40,7 @@ Hs.xialiwei_waterfall_layout_items_data_flag =
     "current_all_y":[]
 
 Hs.xialiwei_waterfall_layout_items_data = [
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/237864c87dfc035c735290fb50a6e63a/1000g0082ousqpp6ji0004a3md878enf1i7lnn4g!nc_n_webp_mw_1"
+        "thumbnail":"static/img/1.webp"
         "width":500
         "height":500
         "ui_type":"xhs_note"
@@ -50,7 +50,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/ddbd4bcf0275a245829280343ac6c341/1040g2sg3136bh49pnm705olm2m6msnoja3agau8!nc_n_webp_mw_1"
+        "thumbnail":"static/img/2.webp"
         "width":1080
         "height":1920
         "ui_type":"xhs_note"
@@ -62,7 +62,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/f29b735433231a5eb098b61a6134afab/1000g0082oivfrsoji00045cnv32jo1v4d1r9umg!nc_n_webp_mw_1"
+        "thumbnail":"static/img/3.webp"
         "width":1920
         "height":1080
         "ui_type":"xhs_note"
@@ -72,7 +72,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/a9e7d3db70c7ca3bcd105702499c8356/1000g0082goil8mej200g5oj2kk8oc2a4rlhhie0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/5.webp"
         "width":800
         "height":600
         "ui_type":"xhs_note"
@@ -84,7 +84,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":""
         "likes_num":112
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/94e1614be233464e127068353558f247/1000g00826our4q4fo000401li2ghch4mjoel1g0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/1.webp"
         "width":500
         "height":500
         "ui_type":"xhs_note"
@@ -94,7 +94,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/dc7b046e5910262e0f408612119bde29/1000g00826mqaea0fo04040hsj9j6iqk2n7ovpao!nc_n_webp_mw_1"
+        "thumbnail":"static/img/3.webp"
         "width":1080
         "height":1920
         "ui_type":"xhs_note"
@@ -106,7 +106,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/9e18f13e0653a208e1322ce9e5792ef5/1000g0082329koq6fe010492h57oh6aailk57puo!nc_n_webp_mw_1"
+        "thumbnail":"static/img/4.webp"
         "width":1920
         "height":1080
         "ui_type":"xhs_note"
@@ -116,7 +116,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/94e1614be233464e127068353558f247/1000g00826our4q4fo000401li2ghch4mjoel1g0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/4.webp"
         "width":800
         "height":600
         "ui_type":"xhs_note"
@@ -128,7 +128,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":""
         "likes_num":112
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/dc7b046e5910262e0f408612119bde29/1000g00826mqaea0fo04040hsj9j6iqk2n7ovpao!nc_n_webp_mw_1"
+        "thumbnail":"static/img/2.webp"
         "width":500
         "height":500
         "ui_type":"xhs_note"
@@ -138,7 +138,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/9e18f13e0653a208e1322ce9e5792ef5/1000g0082329koq6fe010492h57oh6aailk57puo!nc_n_webp_mw_1"
+        "thumbnail":"static/img/1.webp"
         "width":1080
         "height":1920
         "ui_type":"xhs_note"
@@ -150,7 +150,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/94e1614be233464e127068353558f247/1000g00826our4q4fo000401li2ghch4mjoel1g0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/2.webp"
         "width":1920
         "height":1080
         "ui_type":"xhs_note"
@@ -160,7 +160,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/dc7b046e5910262e0f408612119bde29/1000g00826mqaea0fo04040hsj9j6iqk2n7ovpao!nc_n_webp_mw_1"
+        "thumbnail":"static/img/5.webp"
         "width":800
         "height":600
         "ui_type":"xhs_note"
@@ -172,7 +172,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":""
         "likes_num":112
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/9e18f13e0653a208e1322ce9e5792ef5/1000g0082329koq6fe010492h57oh6aailk57puo!nc_n_webp_mw_1"
+        "thumbnail":"static/img/3.webp"
         "width":500
         "height":500
         "ui_type":"xhs_note"
@@ -182,7 +182,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/94e1614be233464e127068353558f247/1000g00826our4q4fo000401li2ghch4mjoel1g0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/5.webp"
         "width":1080
         "height":1920
         "ui_type":"xhs_note"
@@ -194,7 +194,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/dc7b046e5910262e0f408612119bde29/1000g00826mqaea0fo04040hsj9j6iqk2n7ovpao!nc_n_webp_mw_1"
+        "thumbnail":"static/img/7.webp"
         "width":1920
         "height":1080
         "ui_type":"xhs_note"
@@ -204,7 +204,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/9e18f13e0653a208e1322ce9e5792ef5/1000g0082329koq6fe010492h57oh6aailk57puo!nc_n_webp_mw_1"
+        "thumbnail":"static/img/5.webp"
         "width":800
         "height":600
         "ui_type":"xhs_note"
@@ -219,7 +219,7 @@ Hs.xialiwei_waterfall_layout_items_data = [
 ]
 
 Hs.base_demo_data = [
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/237864c87dfc035c735290fb50a6e63a/1000g0082ousqpp6ji0004a3md878enf1i7lnn4g!nc_n_webp_mw_1"
+        "thumbnail":"static/img/0.webp"
         "width":500
         "height":500
         "ui_type":"xhs_note"
@@ -229,7 +229,7 @@ Hs.base_demo_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/ddbd4bcf0275a245829280343ac6c341/1040g2sg3136bh49pnm705olm2m6msnoja3agau8!nc_n_webp_mw_1"
+        "thumbnail":"static/img/1.webp"
         "width":1080
         "height":1920
         "ui_type":"xhs_note"
@@ -241,7 +241,7 @@ Hs.base_demo_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":0
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/f29b735433231a5eb098b61a6134afab/1000g0082oivfrsoji00045cnv32jo1v4d1r9umg!nc_n_webp_mw_1"
+        "thumbnail":"static/img/2.webp"
         "width":1920
         "height":1080
         "ui_type":"xhs_note"
@@ -251,7 +251,7 @@ Hs.base_demo_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":555
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/a9e7d3db70c7ca3bcd105702499c8356/1000g0082goil8mej200g5oj2kk8oc2a4rlhhie0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/3.webp"
         "width":800
         "height":600
         "ui_type":"xhs_note"
@@ -263,7 +263,7 @@ Hs.base_demo_data = [
         "title":""
         "likes_num":112
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/94e1614be233464e127068353558f247/1000g00826our4q4fo000401li2ghch4mjoel1g0!nc_n_webp_mw_1"
+        "thumbnail":"static/img/4.webp"
         "width":500
         "height":500
         "ui_type":"xhs_note"
@@ -273,7 +273,7 @@ Hs.base_demo_data = [
         "title":"XXX公司XXX基地XXX区XXX点"
         "likes_num":5885
     ,
-        "thumbnail":"https://sns-webpic-qc.xhscdn.com/202408150006/dc7b046e5910262e0f408612119bde29/1000g00826mqaea0fo04040hsj9j6iqk2n7ovpao!nc_n_webp_mw_1"
+        "thumbnail":"static/img/5.webp"
         "width":1080
         "height":1920
         "ui_type":"xhs_note"
