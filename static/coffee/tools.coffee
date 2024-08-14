@@ -43,3 +43,16 @@ $ ->
                 min_index = list_num_index
                 min = list_num
         return [min_index,min]
+    Hs.find_list_max_index_and_max = (list_nums=[])->
+        is_first = true
+        max_index = null
+        max = null
+        for list_num,list_num_index in list_nums
+            if is_first
+                max = list_num
+                max_index = list_num_index
+                is_first = false
+            if list_num >= max
+                max_index = list_num_index
+                max = list_num
+        return [max_index,max]

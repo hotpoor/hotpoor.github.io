@@ -44,7 +44,7 @@
       }
       return uuid.join('');
     };
-    return Hs.find_list_min_index_and_min = function(list_nums = []) {
+    Hs.find_list_min_index_and_min = function(list_nums = []) {
       var is_first, j, len1, list_num, list_num_index, min, min_index;
       is_first = true;
       min_index = null;
@@ -62,6 +62,25 @@
         }
       }
       return [min_index, min];
+    };
+    return Hs.find_list_max_index_and_max = function(list_nums = []) {
+      var is_first, j, len1, list_num, list_num_index, max, max_index;
+      is_first = true;
+      max_index = null;
+      max = null;
+      for (list_num_index = j = 0, len1 = list_nums.length; j < len1; list_num_index = ++j) {
+        list_num = list_nums[list_num_index];
+        if (is_first) {
+          max = list_num;
+          max_index = list_num_index;
+          is_first = false;
+        }
+        if (list_num >= max) {
+          max_index = list_num_index;
+          max = list_num;
+        }
+      }
+      return [max_index, max];
     };
   });
 
