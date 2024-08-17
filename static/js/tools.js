@@ -56,7 +56,7 @@
           min_index = list_num_index;
           is_first = false;
         }
-        if (list_num <= min) {
+        if (list_num < min) {
           min_index = list_num_index;
           min = list_num;
         }
@@ -75,7 +75,7 @@
           max_index = list_num_index;
           is_first = false;
         }
-        if (list_num >= max) {
+        if (list_num > max) {
           max_index = list_num_index;
           max = list_num;
         }

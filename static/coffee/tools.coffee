@@ -39,7 +39,7 @@ $ ->
                 min = list_num
                 min_index = list_num_index
                 is_first = false
-            if list_num <= min
+            if list_num < min
                 min_index = list_num_index
                 min = list_num
         return [min_index,min]
@@ -52,7 +52,7 @@ $ ->
                 max = list_num
                 max_index = list_num_index
                 is_first = false
-            if list_num >= max
+            if list_num > max
                 max_index = list_num_index
                 max = list_num
         return [max_index,max]
