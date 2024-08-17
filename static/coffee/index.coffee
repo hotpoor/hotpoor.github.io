@@ -51,6 +51,35 @@ Hs.xialiwei_waterfall_layout_items_data = [
         "author":"user_newconceptenglish_1"
         "title":"Lesson 1 Excuse me! 对不起"
         "likes_num":5885
+    ,
+        "thumbnail":"http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2"
+        "gallery":[
+            "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2",
+            "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_963ce28af9498e1327285e09e77ab9c9?imageView2"
+        ]
+        "width":2479
+        "height":3508
+        "ui_type":"xhs_note"
+        "type":"note"
+        "creator_type":"author"
+        "author":"user_newconceptenglish_1"
+        "title":"Lesson 1 Excuse me! 对不起"
+        "likes_num":5885
+    ,
+        "thumbnail":"http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2"
+        "gallery":[
+            "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2",
+            "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_963ce28af9498e1327285e09e77ab9c9?imageView2"
+        ]
+        "audio":"http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_f_fc5acfe8cb2c2b22447a7bfd6651f000"
+        "width":2479
+        "height":3508
+        "ui_type":"xhs_note_audio"
+        "type":"note"
+        "creator_type":"author"
+        "author":"user_newconceptenglish_1"
+        "title":"Lesson 1 Excuse me! 对不起"
+        "likes_num":5885
 ]
 Hs.base_demo_data = [
         "thumbnail":"static/img/0.webp"
@@ -174,6 +203,26 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
             _html_width = (cards_width-(_html_gap)*(column-1))/column
             _html_height = _html_width/item_data["width"]*item_data["height"]
             _html_uuid = Hs.uuid2(6,null)
+            _img_html_all = """
+                <img src="#{item_data["thumbnail"]}">
+            """
+            _xhs_note_thumbnail_num = 1
+            _xhs_note_thumbnail_more = false
+            _xhs_note_thumbnail_span = ""
+            if item_data["gallery"]?
+                _xhs_note_thumbnail_num = item_data["gallery"].length
+                _img_html_all = ""
+                for img in item_data["gallery"]
+                    _img_html_all = """#{_img_html_all}
+                    <img src="#{img}">
+                    """
+                if _xhs_note_thumbnail_num>1
+                    _xhs_note_thumbnail_more = true
+                    _xhs_note_thumbnail_span = """
+                    <span class="xhs_note_thumbnail_span">
+                        <svg class="reds-icon" width="11" height="11"><use xlink:href="#gallery"></use></svg>
+                    </span>
+                    """
             _html = """
             <div class="xialiwei_waterfall_layout_item_card"
                 data-ui-type="xhs_note"
@@ -183,11 +232,18 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
                 "
                 >
                 <div class="xhs_note_thumbnail"
+                    data-thumbnail-num="#{_xhs_note_thumbnail_num}"
+                    data-thumbnail-more="#{_xhs_note_thumbnail_more}"
+                    data-thumbnail-num-current="0"
                     style="
                         width:#{_html_width}px;
                         height:#{_html_height}px;
                     ">
-                    <img src="#{item_data["thumbnail"]}">
+                    <div class="xhs_note_thumbnail_imgs">
+                        #{_img_html_all}
+                        <div class="xhs_note_thumbnail_imgs_cover"></div>
+                    </div>
+                    #{_xhs_note_thumbnail_span}
                 </div>
                 #{_html_title}
                 <div class="xhs_note_footer">
@@ -229,6 +285,7 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
     console.log Hs.xialiwei_waterfall_layout_items_data
 $ ->
     $(window).on "load",(evt)->
+        Hs.preload_svg()
         $(".xialiwei_waterfall_layout_item_cards_page").empty()
         cards_dom = $(".xialiwei_waterfall_layout_item_cards")[0]
         window_width = $(window).width()-20
@@ -301,3 +358,26 @@ $ ->
                 is_scroll_load_xialiwei_waterfall_layout_item_cards_has_first_scrollTop = 0
                 is_scroll_load_xialiwei_waterfall_layout_item_cards_has_second_scrollTop = 0
             ,1000
+
+    $("body").on "click",".xhs_note_thumbnail[data-thumbnail-more=true]",(evt)->
+        current_xhs_note_thumbnail = this
+        current_xhs_note_thumbnail_scrollWidth = current_xhs_note_thumbnail.scrollWidth
+        current_xhs_note_thumbnail_num = $(current_xhs_note_thumbnail).attr "data-thumbnail-num"
+        current_xhs_note_thumbnail_num = parseInt(current_xhs_note_thumbnail_num)
+        current_xhs_note_thumbnail_num_current = $(current_xhs_note_thumbnail).attr "data-thumbnail-num-current"
+        current_xhs_note_thumbnail_num_current = parseInt(current_xhs_note_thumbnail_num_current)
+        current_xhs_note_thumbnail_scrollLeft_each = current_xhs_note_thumbnail_scrollWidth/current_xhs_note_thumbnail_num
+        current_xhs_note_thumbnail_num_current_next = current_xhs_note_thumbnail_num_current+1
+        if current_xhs_note_thumbnail_num_current_next >= current_xhs_note_thumbnail_num
+            current_xhs_note_thumbnail_num_current_next = 0
+        current_xhs_note_thumbnail_scrollLeft_now = current_xhs_note_thumbnail_scrollLeft_each * current_xhs_note_thumbnail_num_current_next
+        $(current_xhs_note_thumbnail).find(".xhs_note_thumbnail_imgs_cover").css
+            "width":current_xhs_note_thumbnail_scrollWidth
+        $(current_xhs_note_thumbnail).animate
+            "scrollLeft":current_xhs_note_thumbnail_scrollLeft_now
+        ,500
+        ,()->
+            $(current_xhs_note_thumbnail).attr "data-thumbnail-num-current",current_xhs_note_thumbnail_num_current_next
+
+
+
