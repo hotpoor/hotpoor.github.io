@@ -12,6 +12,10 @@
   console.log("hello, xialiwei");
 
   Hs.xialiwei_waterfall_layout_items_data_authors = {
+    "user_newconceptenglish_1": {
+      "name": "新概念英语第一册",
+      "thumbnail": "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_dfb24bd9ffa57be147d5757102138cc1?imageView2"
+    },
     "user0": {
       "name": "啊一丘",
       "thumbnail": "https://sns-avatar-qc.xhscdn.com/avatar/1040g2jo312117b9aj40g4a4hdcrcnqq4ps1bct0?imageView2/2/w/60/format/webp|imageMogr2/strip"
@@ -60,188 +64,15 @@
 
   Hs.xialiwei_waterfall_layout_items_data = [
     {
-      "thumbnail": "static/img/1.webp",
-      "width": 500,
-      "height": 500,
+      "thumbnail": "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2",
+      "width": 2479,
+      "height": 3508,
       "ui_type": "xhs_note",
       "type": "note",
       "creator_type": "author",
-      "author": "user0",
-      "title": "XXX公司XXX基地XXX区XXX点",
+      "author": "user_newconceptenglish_1",
+      "title": "Lesson 1 Excuse me! 对不起",
       "likes_num": 5885
-    },
-    {
-      "thumbnail": "static/img/2.webp",
-      "width": 1080,
-      "height": 1920,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user0",
-    "user1"],
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 0
-    },
-    {
-      "thumbnail": "static/img/3.webp",
-      "width": 1920,
-      "height": 1080,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user7",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 555
-    },
-    {
-      "thumbnail": "static/img/5.webp",
-      "width": 800,
-      "height": 600,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user1",
-    "user0"],
-      "title": "",
-      "likes_num": 112
-    },
-    {
-      "thumbnail": "static/img/1.webp",
-      "width": 500,
-      "height": 500,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user6",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 5885
-    },
-    {
-      "thumbnail": "static/img/3.webp",
-      "width": 1080,
-      "height": 1920,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user0",
-    "user1"],
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 0
-    },
-    {
-      "thumbnail": "static/img/4.webp",
-      "width": 1920,
-      "height": 1080,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user5",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 555
-    },
-    {
-      "thumbnail": "static/img/4.webp",
-      "width": 800,
-      "height": 600,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user1",
-    "user0"],
-      "title": "",
-      "likes_num": 112
-    },
-    {
-      "thumbnail": "static/img/2.webp",
-      "width": 500,
-      "height": 500,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user4",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 5885
-    },
-    {
-      "thumbnail": "static/img/1.webp",
-      "width": 1080,
-      "height": 1920,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user0",
-    "user1"],
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 0
-    },
-    {
-      "thumbnail": "static/img/2.webp",
-      "width": 1920,
-      "height": 1080,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user3",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 555
-    },
-    {
-      "thumbnail": "static/img/5.webp",
-      "width": 800,
-      "height": 600,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user1",
-    "user0"],
-      "title": "",
-      "likes_num": 112
-    },
-    {
-      "thumbnail": "static/img/3.webp",
-      "width": 500,
-      "height": 500,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user2",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 5885
-    },
-    {
-      "thumbnail": "static/img/5.webp",
-      "width": 1080,
-      "height": 1920,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user0",
-    "user1"],
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 0
-    },
-    {
-      "thumbnail": "static/img/7.webp",
-      "width": 1920,
-      "height": 1080,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "author",
-      "author": "user1",
-      "title": "XXX公司XXX基地XXX区XXX点",
-      "likes_num": 555
-    },
-    {
-      "thumbnail": "static/img/5.webp",
-      "width": 800,
-      "height": 600,
-      "ui_type": "xhs_note",
-      "type": "note",
-      "creator_type": "authors",
-      "authors": ["user4",
-    "user0"],
-      "title": "",
-      "likes_num": 112
     }
   ];
 
