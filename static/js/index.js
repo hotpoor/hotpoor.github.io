@@ -71,20 +71,21 @@
       "type": "note",
       "creator_type": "author",
       "author": "user_newconceptenglish_1",
-      "title": "Lesson 1 Excuse me! 对不起",
+      "title": "Lesson 1 Excuse me! 对不起！",
       "likes_num": 5885
     },
     {
       "thumbnail": "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2",
       "gallery": ["http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_9d3e960f16ef8e6aea683533b37f1962?imageView2",
     "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_963ce28af9498e1327285e09e77ab9c9?imageView2"],
+      "audio": "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_f_fc5acfe8cb2c2b22447a7bfd6651f000",
       "width": 2479,
       "height": 3508,
       "ui_type": "xhs_note",
       "type": "note",
       "creator_type": "author",
       "author": "user_newconceptenglish_1",
-      "title": "Lesson 1 Excuse me! 对不起",
+      "title": "Lesson 1 Excuse me! 对不起！",
       "likes_num": 5885
     },
     {
@@ -98,7 +99,20 @@
       "type": "note",
       "creator_type": "author",
       "author": "user_newconceptenglish_1",
-      "title": "Lesson 1 Excuse me! 对不起",
+      "title": "Lesson 1 Excuse me! 对不起！",
+      "likes_num": 5885
+    },
+    {
+      "thumbnail": "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_82e22b183cec98cee271308500f7c97b?imageView2",
+      "gallery": ["http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_82e22b183cec98cee271308500f7c97b?imageView2",
+    "http://cdn0.ofcourse.io/02f1cf87528d43a0a676491c06cf1789_d82d80ab4a1f87cd676b948da14cea73?imageView2"],
+      "width": 2479,
+      "height": 3508,
+      "ui_type": "xhs_note",
+      "type": "note",
+      "creator_type": "author",
+      "author": "user_newconceptenglish_1",
+      "title": "Lesson 2 Is this your ... ? 这是你的……吗？",
       "likes_num": 5885
     }
   ];
@@ -176,7 +190,7 @@
   ];
 
   Hs.xialiwei_waterfall_layout_items_load = function(cards_dom, cards_width = 500, cards_height = 500, column = 2, item_data_index = 0) {
-    var _html, _html_creator, _html_creator_author, _html_creator_author_name, _html_creator_author_thumbnail, _html_gap, _html_height, _html_title, _html_uuid, _html_width, _html_width_base, _img_html_all, _xhs_note_thumbnail_more, _xhs_note_thumbnail_num, _xhs_note_thumbnail_span, current_all_y, h, i, img, item_data, items_all_num, items_num_need, j, k, l, len, len1, ref, ref1, ref2, ref3, ref4, use_max, use_max_index, use_min, use_min_index, w, x, y;
+    var _html, _html_creator, _html_creator_author, _html_creator_author_name, _html_creator_author_thumbnail, _html_gap, _html_height, _html_title, _html_uuid, _html_width, _html_width_base, _img_html_all, _is_liked_html, _xhs_note_audio_tool, _xhs_note_thumbnail_more, _xhs_note_thumbnail_num, _xhs_note_thumbnail_spans, current_all_y, h, i, img, item_data, items_all_num, items_num_need, j, k, l, len, len1, ref, ref1, ref2, ref3, ref4, use_max, use_max_index, use_min, use_min_index, w, x, y;
     console.log("xialiwei_waterfall_layout_items_load");
     $(cards_dom).css({
       width: cards_width,
@@ -232,7 +246,7 @@
         _img_html_all = `<img src="${item_data["thumbnail"]}">`;
         _xhs_note_thumbnail_num = 1;
         _xhs_note_thumbnail_more = false;
-        _xhs_note_thumbnail_span = "";
+        _xhs_note_thumbnail_spans = "";
         if (item_data["gallery"] != null) {
           _xhs_note_thumbnail_num = item_data["gallery"].length;
           _img_html_all = "";
@@ -244,8 +258,35 @@
           }
           if (_xhs_note_thumbnail_num > 1) {
             _xhs_note_thumbnail_more = true;
-            _xhs_note_thumbnail_span = `<span class="xhs_note_thumbnail_span xhs_note_thumbnail_span_gallery">
-    <svg class="reds-icon" width="11" height="11"><use xlink:href="#gallery"></use></svg>
+            _xhs_note_thumbnail_spans = `<span class="xhs_note_thumbnail_span xhs_note_thumbnail_span_gallery">
+    <svg class="reds-icon" width="11" height="11"><use xlink:href="#xhs-gallery"></use></svg>
+</span>`;
+          }
+        }
+        _xhs_note_audio_tool = "";
+        if (item_data["audio"] != null) {
+          _xhs_note_audio_tool = `<div class="xhs_note_thumbnail_span_audio_tools" style="display:none;">
+    <audio class="xhs_note_thumbnail_span_audio_tools_audio" data-src="${item_data["audio"]}" controls
+        ontimeupdate="Hs.xhs_note_thumbnail_span_audio_tools_audio_on_timeupdate(this)"
+    ></audio>
+    <div class="xhs_note_thumbnail_span_audio_tools_audio_base">
+        <div class="xhs_note_thumbnail_span_audio_tools_audio_base_line"></div>
+        <div class="xhs_note_thumbnail_span_audio_tools_audio_base_btn"></div>
+    </div>
+</div>`;
+          _xhs_note_thumbnail_spans = `<span class="xhs_note_thumbnail_span xhs_note_thumbnail_span_audio" data-audio-show="false">
+    <svg class="reds-icon" width="11" height="11"><use xlink:href="#xhs-audio-s"></use></svg>
+    ${_xhs_note_audio_tool}
+</span>
+${_xhs_note_thumbnail_spans}`;
+        }
+        _is_liked_html = `<span class="xhs_note_likes_span xhs_note_likes_span_like">
+    <svg class="reds-icon" width="11" height="11"><use xlink:href="#xhs-like"></use></svg>
+</span>`;
+        if (item_data["liked"] != null) {
+          if (item_data["liked"]) {
+            _is_liked_html = `<span class="xhs_note_likes_span xhs_note_likes_span_like">
+    <svg class="reds-icon" width="11" height="11"><use xlink:href="#xhs-liked"></use></svg>
 </span>`;
           }
         }
@@ -260,6 +301,7 @@
         data-thumbnail-num="${_xhs_note_thumbnail_num}"
         data-thumbnail-more="${_xhs_note_thumbnail_more}"
         data-thumbnail-num-current="0"
+        data-thumbnail-num-run="false"
         style="
             width:${_html_width}px;
             height:${_html_height}px;
@@ -268,13 +310,16 @@
             ${_img_html_all}
             <div class="xhs_note_thumbnail_imgs_cover"></div>
         </div>
-        ${_xhs_note_thumbnail_span}
+        <div class="xhs_note_thumbnail_spans">
+            ${_xhs_note_thumbnail_spans}
+        </div>
     </div>
     ${_html_title}
     <div class="xhs_note_footer">
         ${_html_creator}
         <div class="xhs_note_likes">
-        ${item_data["likes_num"]}
+            ${_is_liked_html}
+            <span class="xhs_note_likes_num">${item_data["likes_num"]}</span>
         </div>
     </div>
 </div>`;
@@ -403,9 +448,21 @@
         }, 1000);
       }
     });
-    return $("body").on("click", ".xhs_note_thumbnail[data-thumbnail-more=true] .xhs_note_thumbnail_span_gallery", function(evt) {
-      var current_xhs_note_thumbnail, current_xhs_note_thumbnail_num, current_xhs_note_thumbnail_num_current, current_xhs_note_thumbnail_num_current_next, current_xhs_note_thumbnail_scrollLeft_each, current_xhs_note_thumbnail_scrollLeft_now, current_xhs_note_thumbnail_scrollWidth;
+    $("body").on("click", ".xhs_note_thumbnail[data-thumbnail-more=true] .xhs_note_thumbnail_span_gallery", function(evt) {
+      var current_xhs_note_thumbnail, current_xhs_note_thumbnail_num_run;
       current_xhs_note_thumbnail = $(this).parents(".xhs_note_thumbnail[data-thumbnail-more=true]")[0];
+      current_xhs_note_thumbnail_num_run = $(current_xhs_note_thumbnail).attr("data-thumbnail-num-run");
+      if (current_xhs_note_thumbnail_num_run === "false") {
+        current_xhs_note_thumbnail_num_run = "true";
+        $(current_xhs_note_thumbnail).attr("data-thumbnail-num-run", current_xhs_note_thumbnail_num_run);
+        return Hs.xhs_note_thumbnail_num_run_gallery(current_xhs_note_thumbnail, 500, 2000);
+      } else {
+        current_xhs_note_thumbnail_num_run = "false";
+        return $(current_xhs_note_thumbnail).attr("data-thumbnail-num-run", current_xhs_note_thumbnail_num_run);
+      }
+    });
+    Hs.xhs_note_thumbnail_num_run_gallery = function(current_xhs_note_thumbnail, aimate_time = 500, animate_time_next = 2000) {
+      var current_xhs_note_thumbnail_num, current_xhs_note_thumbnail_num_current, current_xhs_note_thumbnail_num_current_next, current_xhs_note_thumbnail_scrollLeft_each, current_xhs_note_thumbnail_scrollLeft_now, current_xhs_note_thumbnail_scrollWidth;
       current_xhs_note_thumbnail_scrollWidth = current_xhs_note_thumbnail.scrollWidth;
       current_xhs_note_thumbnail_num = $(current_xhs_note_thumbnail).attr("data-thumbnail-num");
       current_xhs_note_thumbnail_num = parseInt(current_xhs_note_thumbnail_num);
@@ -422,10 +479,92 @@
       });
       return $(current_xhs_note_thumbnail).animate({
         "scrollLeft": current_xhs_note_thumbnail_scrollLeft_now
-      }, 500, function() {
-        return $(current_xhs_note_thumbnail).attr("data-thumbnail-num-current", current_xhs_note_thumbnail_num_current_next);
+      }, aimate_time, function() {
+        var ref;
+        $(current_xhs_note_thumbnail).attr("data-thumbnail-num-current", current_xhs_note_thumbnail_num_current_next);
+        if ((ref = $(current_xhs_note_thumbnail).attr("data-thumbnail-num-run")) === "true") {
+          return setTimeout(function() {
+            return Hs.xhs_note_thumbnail_num_run_gallery(current_xhs_note_thumbnail, aimate_time, animate_time_next);
+          }, animate_time_next);
+        }
       });
+    };
+    Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info = null;
+    $("body").on("mousedown", ".xhs_note_thumbnail_span_audio_tools_audio_base_btn", function(evt) {
+      if (Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info === null) {
+        Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info = {
+          "dom": $(this),
+          "dom_line": $(this).parents(".xhs_note_thumbnail_span_audio_tools_audio_base").find(".xhs_note_thumbnail_span_audio_tools_audio_base_line"),
+          "start_left": parseFloat($(this).css("left")),
+          "start_x": evt.pageX,
+          "audio": $(this).parents(".xhs_note_thumbnail_span_audio_tools").find(".xhs_note_thumbnail_span_audio_tools_audio")[0],
+          "base_width": $(this).parents(".xhs_note_thumbnail_span_audio_tools_audio_base").width(),
+          "line": $(this).parents(".xhs_note_thumbnail_span_audio_tools_audio_base").width()
+        };
+      }
+      evt.preventDefault();
+      evt.stopPropagation();
+    });
+    $("body").on("click", ".xhs_note_thumbnail_span_audio_tools", function(evt) {
+      evt.preventDefault();
+      evt.stopPropagation();
+    });
+    $(window).on("mousemove", function(evt) {
+      var audio, base_width, dom, dom_line, left_now, move_x, start_left, start_x;
+      if (Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info !== null) {
+        dom = Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info["dom"];
+        dom_line = Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info["dom_line"];
+        audio = Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info["audio"];
+        move_x = evt.pageX;
+        start_left = Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info["start_left"];
+        start_x = Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info["start_x"];
+        left_now = start_left + (move_x - start_x);
+        base_width = Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info["base_width"];
+        if (left_now < 0) {
+          left_now = 0;
+        } else if (left_now > base_width) {
+          left_now = base_width;
+        }
+        dom.css({
+          "left": left_now
+        });
+        dom_line.css({
+          "width": left_now
+        });
+        return audio.currentTime = audio.duration / 100 * left_now;
+      }
+    });
+    $(window).on("mouseup", function(evt) {
+      if (Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info !== null) {
+        return Hs.xhs_note_thumbnail_span_audio_tools_audio_base_btn_info = null;
+      }
+    });
+    return $("body").on("click", ".xhs_note_thumbnail_span_audio", function(evt) {
+      var _xhs_note_thumbnail_span_audio_data_audio_show, dom;
+      dom = this;
+      _xhs_note_thumbnail_span_audio_data_audio_show = $(dom).attr("data-audio-show");
+      if (_xhs_note_thumbnail_span_audio_data_audio_show === "false") {
+        $(dom).attr("data-audio-show", "true");
+        return $(dom).find(".xhs_note_thumbnail_span_audio_tools").fadeIn(function() {
+          $(dom).find(".xhs_note_thumbnail_span_audio_tools_audio").attr("src", $(dom).find(".xhs_note_thumbnail_span_audio_tools_audio").attr("data-src"));
+          return $(dom).find(".xhs_note_thumbnail_span_audio_tools_audio")[0].play();
+        });
+      } else {
+        $(dom).attr("data-audio-show", "false");
+        return $(dom).find(".xhs_note_thumbnail_span_audio_tools").fadeOut(function() {
+          return $(dom).find(".xhs_note_thumbnail_span_audio_tools_audio")[0].pause();
+        });
+      }
     });
   });
+
+  // $(document).on "timeupdate",".xhs_note_thumbnail_span_audio_tools_audio",(evt)->
+//     console.log("audio timeupdate")
+//     audio = this
+//     percentage = (audio.currentTime / audio.duration) * 100;
+//     $(audio).parents(".xhs_note_thumbnail_span_audio_tools").find(".xhs_note_thumbnail_span_audio_tools_audio_base_btn").css
+//         "left":percentage
+//     $(audio).parents(".xhs_note_thumbnail_span_audio_tools").find(".xhs_note_thumbnail_span_audio_tools_audio_base_line").css
+//         "width":percentage
 
 }).call(this);
