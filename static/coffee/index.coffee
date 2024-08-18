@@ -219,7 +219,7 @@ Hs.xialiwei_waterfall_layout_items_load=(cards_dom,cards_width=500,cards_height=
                 if _xhs_note_thumbnail_num>1
                     _xhs_note_thumbnail_more = true
                     _xhs_note_thumbnail_span = """
-                    <span class="xhs_note_thumbnail_span">
+                    <span class="xhs_note_thumbnail_span xhs_note_thumbnail_span_gallery">
                         <svg class="reds-icon" width="11" height="11"><use xlink:href="#gallery"></use></svg>
                     </span>
                     """
@@ -359,8 +359,8 @@ $ ->
                 is_scroll_load_xialiwei_waterfall_layout_item_cards_has_second_scrollTop = 0
             ,1000
 
-    $("body").on "click",".xhs_note_thumbnail[data-thumbnail-more=true]",(evt)->
-        current_xhs_note_thumbnail = this
+    $("body").on "click",".xhs_note_thumbnail[data-thumbnail-more=true] .xhs_note_thumbnail_span_gallery",(evt)->
+        current_xhs_note_thumbnail = $(this).parents(".xhs_note_thumbnail[data-thumbnail-more=true]")[0]
         current_xhs_note_thumbnail_scrollWidth = current_xhs_note_thumbnail.scrollWidth
         current_xhs_note_thumbnail_num = $(current_xhs_note_thumbnail).attr "data-thumbnail-num"
         current_xhs_note_thumbnail_num = parseInt(current_xhs_note_thumbnail_num)

@@ -244,7 +244,7 @@
           }
           if (_xhs_note_thumbnail_num > 1) {
             _xhs_note_thumbnail_more = true;
-            _xhs_note_thumbnail_span = `<span class="xhs_note_thumbnail_span">
+            _xhs_note_thumbnail_span = `<span class="xhs_note_thumbnail_span xhs_note_thumbnail_span_gallery">
     <svg class="reds-icon" width="11" height="11"><use xlink:href="#gallery"></use></svg>
 </span>`;
           }
@@ -403,9 +403,9 @@
         }, 1000);
       }
     });
-    return $("body").on("click", ".xhs_note_thumbnail[data-thumbnail-more=true]", function(evt) {
+    return $("body").on("click", ".xhs_note_thumbnail[data-thumbnail-more=true] .xhs_note_thumbnail_span_gallery", function(evt) {
       var current_xhs_note_thumbnail, current_xhs_note_thumbnail_num, current_xhs_note_thumbnail_num_current, current_xhs_note_thumbnail_num_current_next, current_xhs_note_thumbnail_scrollLeft_each, current_xhs_note_thumbnail_scrollLeft_now, current_xhs_note_thumbnail_scrollWidth;
-      current_xhs_note_thumbnail = this;
+      current_xhs_note_thumbnail = $(this).parents(".xhs_note_thumbnail[data-thumbnail-more=true]")[0];
       current_xhs_note_thumbnail_scrollWidth = current_xhs_note_thumbnail.scrollWidth;
       current_xhs_note_thumbnail_num = $(current_xhs_note_thumbnail).attr("data-thumbnail-num");
       current_xhs_note_thumbnail_num = parseInt(current_xhs_note_thumbnail_num);
